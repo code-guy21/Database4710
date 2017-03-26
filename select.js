@@ -1,8 +1,8 @@
-var mysql = require('mysql');
-var express = require('express')
+const mysql = require('mysql');
+const express = require('express')
+var fs = require('fs');
 var app = express()
-var http = require('http');
-var port = 1337;
+var port = 8080;
 
 var connection = mysql.createConnection({
   host: 'localhost',
@@ -21,49 +21,72 @@ connection.connect(function(error){
 
 });
 
+var num;
 
-// website.com/articles?id=1
-// website.com/articles?id=1; drop table articles;
+function renderHTML(path, response) {
+    fs.readFile(path, null, function(error, data) {
+        if (error) {
+            response.writeHead(404);
+            response.write('File not found!');
+        } else {
+            response.write(data);
+        }
+        response.end();
+    });
+}
 
-var num = '1';
+app.get('/', function(req,resp){
 
-/*var query = connection.query('select * from articles where id = ' + id ,function(err, result) {
-  console.log(result);
-});*/
+  renderHTML('login.html', resp);
+});
 
-http.createServer(function(req,resp){
+app.get('/index', function(req,resp){
 
-  resp.writeHead(200,{"Content-Type":"text/plain"});
-  resp.write("Hello my name is ");
+  renderHTML('index.html', resp);
+});
 
-  connection.query("SELECT * FROM articles WHERE id=?",num, function(error,value){
-    if(!!error){
-      console.log('Error in the query');
-    }
-    else{
-      console.log('Successful query');
-      console.log(value[0]);
-      resp.write(value[0].author);
-      resp.end();
-    }
-  });
+app.get('/miguel', function(req,resp){
 
-}).listen(port);
+    num = 5;
 
-/*app.get('/', function(req,resp){
-  resp.writeHead(200,{"Content-Type":"text/plain"});
-  resp.write("Hello my name is ");
+    resp.writeHead(200,{"Content-Type":"text/plain"});
 
-  connection.query("SELECT * FROM articles WHERE id=?",num, function(error,value){
-    if(!!error){
-      console.log('Error in the query');
-    }
-    else{
-      console.log('Successful query');
-      console.log(value[0]);
-      resp.write(value[0].author);
-      resp.end();
-    }
-  });
+    resp.write("Hello my name is ");
 
-}).listen(port);*/
+    connection.query("SELECT * FROM articles WHERE id=?",num, function(error,value){
+      if(!!error){
+        console.log('Error in the query');
+      }
+      else{
+        console.log('Successful query');
+        console.log(value[0]);
+        resp.write(value[0].author);
+        resp.end();
+      }
+    });
+});
+
+app.get('/alex', function(req,resp){
+
+    num = 1;
+    resp.writeHead(200,{"Content-Type":"text/plain"});
+
+    resp.write("Hello my name is ");
+
+    connection.query("SELECT * FROM articles WHERE id=?",num, function(error,value){
+      if(!!error){
+        console.log('Error in the query');
+      }
+      else{
+        console.log('Successful query');
+        console.log(value[0]);
+        resp.write(value[0].author);
+        resp.end();
+      }
+    });
+});
+
+
+app.listen(port,function(){
+  console.log('Server is listening at http://localhost:8080');
+})
