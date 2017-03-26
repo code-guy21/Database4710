@@ -28,7 +28,7 @@ CREATE TABLE admin(
 );
 
 # university
-# TODO: create trigger to update u_numstud whenever new student is created
+# TODO: create trigger to update u_numberstudentstud whenever new student is created
 # may change to DEFAULT 0 later
 CREATE TABLE university(
 	u_id int(11) NOT NULL AUTO_INCREMENT,
@@ -143,7 +143,7 @@ CREATE TABLE join_rso(
 	s_id int(11) NOT NULL,
 	is_approved boolean NOT NULL DEFAULT 0,
 	PRIMARY KEY (rso_id,s_id),
-	FOREIGN KEY (r_id) REFERENCES rso(rso_id) ON DELETE CASCADE,
+	FOREIGN KEY (rso_id) REFERENCES rso(rso_id) ON DELETE CASCADE,
 	FOREIGN KEY (s_id) REFERENCES student(s_id) ON DELETE CASCADE
 );
 
