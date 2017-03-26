@@ -1,0 +1,30 @@
+
+/*all public events*/
+SELECT E.e_name;
+FROM event E;
+WHERE E.e_public = 1;
+
+/*all private events*/
+SELECT E.e_name;
+FROM event E;
+WHERE E.e_private = 1;
+
+/*RSO events*/
+SELECT R.rso_name
+FROM rso R, student S, rso_member M
+WHERE S.s_id = M.rso_id AND R.rso_id = M.rso_id;
+
+/*University Events*/
+SELECT E.e_name;
+FROM event E, university U;
+WHERE E.e_public = 0 AND U.u_id = E.e_id;
+
+/*RSO leaders*/
+SELECT *
+FROM admin A, student S
+WHERE S.s_id = A.s_id;
+
+/*Universities in Florida*/
+SELECT U.u_name;
+FROM university U;
+WHERE U.u_state = Florida;
