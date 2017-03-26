@@ -4,16 +4,25 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width = device-width, initial-scale = 1">
-<title>Bootstrap Tutorial</title>
+<title>Home</title>
 
-<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway:400,700|Shadows+Into+Light+Two" rel="stylesheet">
 
 <style>
-.jumbotron{
-    background-color:#2E2D88;
-    color:white;
-}
+.jumbotron2 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 30px;
+  padding-left: 30px;
+  border-radius: 6px;
 
+  color: inherit;
+  background-color: #ffffff;
+}
+body {
+    background-color: #00ffff;
+}
 /* Adds borders for tabs */
 .tab-content {
     border-left: 1px solid #ddd;
@@ -23,6 +32,26 @@
 }
 .nav-tabs {
     margin-bottom: 0;
+}
+
+m1 {
+  font-family: 'Shadows Into Light Two', cursive;
+  font-size: 500%;
+}
+m2{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 250%;
+}
+m3{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 105%;
+}
+m4{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 75%;
 }
 </style>
 </head>
@@ -58,14 +87,15 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-          <li><a href="#">Look Events</a></li>
-          <li><a href="#">Add Events</a></li>
-          <li><a href="#">Make RSO</a></li>
+          <li><a href="Home.html">Home</a></li>
+          <li class="active"><a href="#">Event LookUp <span class="sr-only">(current)</span></a></li>
+          <li><a href="AddEvent.html">Add Events</a></li>
+          <li><a href="MakeRsoRequest.html">Make RSO Request </a></li>
         </ul>
         <!-- navbar-left will move the search to the left -->
         <form class="navbar-form navbar-right" role="search">
-          <button type="submit" class="btn btn-default">Sign Out</button>
+          <m3> Welcome, User!  &#160 &#160 </m3>
+          <a href="../Main/Main.html" class="btn btn-default" role="button">Sign Out</a>
         </form>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -74,61 +104,41 @@
 
 <div class="container">
   <div class="page-header">
-  <h1>College Events</h1>
+  <m1>College Events</m1>
   </div>
   <div class="container">
   <div class="row">
   <!-- jumbotron enlarges fonts and puts everything in a gray box with rounded corners. If jumbotron is outside a container it fills the total width. You can change the styles by placing the changes after the Bootstrap CDN link -->
     <div class="container col-sm-8 col-xs-12">
-        <div class="jumbotron">
+        <div class="jumbotron3">
           <div class="container">
           <div class="row">
-            <h2>Biggest Winner</h2>
-            <h3>All Day</h3>
-            <p>The Biggest Winner challenge is a 12 week program (with a one week try out) designed to help students improve exercise and nutrition habits in order to improve total wellness, along with reducing the risk of chronic disease. Students will receive assistance and guidance from certified trainers to help implement healthy behavioral changes that will increase their quality of life.</p>
+            <m2>Biggest Winner</m2>
+            <m3>All Day</m3>
+            <p><m4>The Biggest Winner challenge is a 12 week program (with a one week try out) designed to help students improve exercise and nutrition habits in order to improve total wellness, along with reducing the risk of chronic disease. Students will receive assistance and guidance from certified trainers to help implement healthy behavioral changes that will increase their quality of life.</m3></p>
             <button type="submit" class="btn btn-success col-xs-2 col-xs-offset-8"> Join</input>
             <button type="button" class="btn btn-danger col-xs-2" role="button"> Decline</button>
           </div>
           </div>
         </div>
-        <div class="jumbotron">
+        <div class="jumbotron3">
           <div class="container">
           <div class="row">
-            <h2>Biggest Winner</h2>
-            <h3>All Day</h3>
-            <p>The Biggest Winner challenge is a 12 week program (with a one week try out) designed to help students improve exercise and nutrition habits in order to improve total wellness, along with reducing the risk of chronic disease. Students will receive assistance and guidance from certified trainers to help implement healthy behavioral changes that will increase their quality of life.</p>
+            <m2>Biggest Winner</m2>
+            <m3>All Day</m3>
+            <p><m4>The Biggest Winner challenge is a 12 week program (with a one week try out) designed to help students improve exercise and nutrition habits in order to improve total wellness, along with reducing the risk of chronic disease. Students will receive assistance and guidance from certified trainers to help implement healthy behavioral changes that will increase their quality of life.</m3></p>
             <button type="submit" class="btn btn-success col-xs-2 col-xs-offset-8"> Join</input>
             <button type="button" class="btn btn-danger col-xs-2" role="button"> Decline</button>
           </div>
           </div>
         </div>
-        <div class="jumbotron">
-          <div class="container">
-          <div class="row">
-            <h2>Biggest Winner</h2>
-            <h3>All Day</h3>
-            <p>The Biggest Winner challenge is a 12 week program (with a one week try out) designed to help students improve exercise and nutrition habits in order to improve total wellness, along with reducing the risk of chronic disease. Students will receive assistance and guidance from certified trainers to help implement healthy behavioral changes that will increase their quality of life.</p>
-            <button type="submit" class="btn btn-success col-xs-2 col-xs-offset-8"> Join</input>
-            <button type="button" class="btn btn-danger col-xs-2" role="button"> Decline</button>
-          </div>
-          </div>
-        </div>
-        <div class="jumbotron">
-          <div class="container">
-          <div class="row">
-            <h2>Biggest Winner</h2>
-            <h3>All Day</h3>
-            <p>The Biggest Winner challenge is a 12 week program (with a one week try out) designed to help students improve exercise and nutrition habits in order to improve total wellness, along with reducing the risk of chronic disease. Students will receive assistance and guidance from certified trainers to help implement healthy behavioral changes that will increase their quality of life.</p>
-            <button type="submit" class="btn btn-success col-xs-2 col-xs-offset-8"> Join</input>
-            <button type="button" class="btn btn-danger col-xs-2" role="button"> Decline</button>
-          </div>
-          </div>
-        </div>
+
     </div>
 
     <div class="container col-sm-3 col-sm-offset-1 col-xs-9 col-xs-offset-3">
     		<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=250&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=e0h4818hvufcc311ebo7meusdo%40group.calendar.google.com&amp;color=%230F4B38&amp;ctz=America%2FNew_York" style="border:solid 1px #777" width="250" height="250" frameborder="0" scrolling="no"></iframe></div>
    </div>
+ </div>
  </div>
 
 </body>
