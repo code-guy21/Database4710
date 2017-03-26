@@ -10,19 +10,6 @@
 <link href="https://fonts.googleapis.com/css?family=Raleway:400,700|Shadows+Into+Light+Two" rel="stylesheet">
 
 <style>
-.jumbotron2 {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-right: 30px;
-  padding-left: 30px;
-  border-radius: 6px;
-
-  color: inherit;
-  background-color: #ffffff;
-}
-body {
-    background-color: #00ffff;
-}
 /* Adds borders for tabs */
 .tab-content {
     border-left: 1px solid #ddd;
@@ -48,11 +35,6 @@ m3{
   font-weight: 400;
   font-size: 10%;
 }
-m4{
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 100%;
-}
 
 </style>
 </head>
@@ -62,29 +44,41 @@ m4{
 
   <div class="col-sm-8 col-sm-offset-2">
   <m1>College Events</m1>
-  <div class="jumbotron2">
-  <p><m2> Login Please  </m2></p>
+  <div class="jumbotron">
+  <p><m2> Please enter all of your information </m2></p>
 
   <form>
-
+    <div class="form-group">
+      <label><m2> First Name: <m2></label>
+      <m3> <input type="text" class ="form-control" placeholder="First Name"></m3>
+    </div>
+    <div class="form-group">
+      <label><m2> Last Name: <m2></label>
+       <m3> <input type="text" class ="form-control" placeholder="Last Name"></m3>
+    </div>
     <div class="form-group">
       <label><m2> Username: </m2></label>
       <m3> <input type="text" class ="form-control" placeholder="Username"> </m3>
     </div>
     <div class="form-group">
+      <label> <m2> Email: </m2></label>
+      <m3> <input type="text" class ="form-control" placeholder="Email"> </m3>
+    </div>
+    <div class="form-group">
       <label> <m2> Password: </m2> </label>
       <m3> <input type="password" class ="form-control" placeholder="Password"> </m3>
+    </div>
+    <div class="form-group">
+      <label> <m2> Confirm Password: </m2> </label>
+      <m3> <input type="password" class ="form-control" placeholder="Confrim Password"> </m3>
     </div>
   </form>
   <br>
   <div class="row">
   <div class="col-xs-2 col-xs-offset-5">
-  <m3> <a href="final.html" class="btn btn-primary btn-lg"> Login in <span class="glyphicon glyphicon-log-in"></span></a> </m3>
+  <m3> <a href="#" class="btn btn-primary btn-lg">Sign Up <span class="glyphicon glyphicon-log-in"></span></a> </m3>
   </div>
   </div>
-  <m4> <a href="Register.html" class"btn btn-default btn-lg" role="button">Not a user.....? Register!</a> </m4>
-  <br>
-  <m4> <a href="AdminRegister.html" class"btn btn-default btn-lg" role="button">Need to add your School...? be an Admin!</a></m4> 
 
   </div>
 </div>
