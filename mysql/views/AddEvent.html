@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width = device-width, initial-scale = 1">
+<title>Home</title>
+
+<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway:400,700|Shadows+Into+Light+Two" rel="stylesheet">
+
+<style>
+.jumbotron2 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 30px;
+  padding-left: 30px;
+  border-radius: 6px;
+
+  color: inherit;
+  background-color: #ffffff;
+}
+body {
+    background-color: #00ffff;
+}
+/* Adds borders for tabs */
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+.nav-tabs {
+    margin-bottom: 0;
+}
+
+m1 {
+  font-family: 'Shadows Into Light Two', cursive;
+  font-size: 500%;
+}
+m2{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 250%;
+}
+m3{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 10%;
+}
+m4{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 150%;
+}
+m5{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 105%;
+}
+</style>
+</head>
+<body>
+
+  <!-- Collapsible Navigation Bar -->
+
+
+  <!-- .navbar-fixed-top, or .navbar-fixed-bottom can be added to keep the nav bar fixed on the screen -->
+  <!-- <nav class="navbar navbar-fixed-top"> -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+
+        <!-- Button that toggles the navbar on and off on small screens -->
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+
+        <!-- Hides information from screen readers -->
+          <span class="sr-only"></span>
+
+          <!-- Draws 3 bars in navbar button when in small mode -->
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <!-- You'll have to add padding in your image on the top and right of a few pixels (CSS Styling will break the navbar) -->
+        <!--<a class="pull-left" href="#"><img src="NTTLogosm.png"></a> -->
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="/home">Home</a></li>
+          <li><a href="/lookup">Event LookUp</a></li>
+          <li class="active"><a href="#">Add Events <span class="sr-only">(current)</span></a></li>
+          <li><a href="/rsorequest">Make RSO Request </a></li>
+        </ul>
+        <!-- navbar-left will move the search to the left -->
+        <form class="navbar-form navbar-right" role="search">
+          <m3> Welcome, User!  &#160 &#160 </m3>
+          <a href="/" class="btn btn-default" role="button">Sign Out</a>
+        </form>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <br>
+
+<div class="container">
+  <div class="page-header">
+  <m1>College Events</m1>
+  </div>
+  <div class="row">
+    <div class="jumbotron2 col-md-10 col-md-offset-1">
+    <m2> Creat Event </m2>
+    <p><m4> Use the form below to creat a new Event. All Events will be approved by colleges administrator</m4></p>
+
+    <form>
+      <div class="form-group">
+        <label><m5> Title: <m5></label>
+        <m3> <input type="text" class ="form-control" id=EventTitle placeholder="Fun Run"></m3>
+      </div>
+      <div class="form-group">
+        <label><m5> Description: </m5></label>
+        <m3><textarea class="form-control" placeholder="Type here" id="EventDiscrp" rows="3"></textarea></m3>
+      </div>
+
+      <label><m5> When: </m5></label>
+      <div class="jumbotron">
+        <div class="form-group">
+          <label><m5> Start: </m5></label>
+          <m3> <input type="date" class ="form-control" id=EventDateStart ></m3>
+          <m3> <input type="time" class ="form-control" id=EventDateStart ></m3>
+        </div>
+
+        <div class="form-group">
+          <label><m5> End: </m5></label>
+          <m3> <input type="date" class ="form-control" id=EventDateEnd ></m3>
+          <m3> <input type="time" class ="form-control" id=EventDateEnd ></m3>
+        </div>
+
+        <div class="form-group">
+          <label><m5> Location: </m5></label>
+          <m3> <input type="text" class ="form-control" id=EventTitle placeholder="Orlando,FL"></m3>
+        </div>
+      </div>
+
+      <label><m5> Owner: </m5></label>
+      <div class="jumbotron">
+        <div class="form-group">
+          <label><m5> Name: </m5></label>
+          <m3> <input type="text" class ="form-control" id=EventOwnerName placeholder="Name"></m3>
+        </div>
+
+        <div class="form-group">
+          <label><m5> Email: </m5></label>
+          <m3> <input type="email" class ="form-control" id=EventOwnerEmail placeholder="Email"></m3>
+          </div>
+
+        <div class="form-group">
+          <label><m5> Phone: </m5></label>
+          <m3> <input type="phone" class ="form-control" id=EventOwnerPhone placeholder="Phone"></m3>
+        </div>
+      </div>
+
+    <br>
+    <div class="row">
+      <div class="col-xs-2 col-xs-offset-5">
+      <m3> <a href="#" class="btn btn-primary btn-lg">Creat Event <span class="glyphicon glyphicon-calendar"></span></a> </m3>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+</html>
