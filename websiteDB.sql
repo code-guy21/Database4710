@@ -1,3 +1,18 @@
+# university
+# TODO: create trigger to update u_numberstudentstud whenever new student is created
+# may change to DEFAULT 0 later
+CREATE TABLE university(
+	u_id int(11) NOT NULL AUTO_INCREMENT,
+	u_name varchar(30) NOT NULL,
+	u_numberstudents int(11) NOT NULL DEFAULT 0 ,
+	u_location varchar(100),
+	u_description varchar(255),
+	u_emaildomain varchar(20) NOT NULL,
+	u_imgage varbinary(max) NOT NULL,
+	PRIMARY KEY (u_id),
+	UNIQUE (u_emaildomain)
+);
+
 # student
 CREATE TABLE student(
 	s_id int(11) NOT NULL AUTO_INCREMENT,
@@ -25,21 +40,6 @@ CREATE TABLE admin(
 	s_id int(11) NOT NULL,
 	PRIMARY KEY (s_id),
 	FOREIGN KEY (s_id) REFERENCES student(s_id) ON DELETE CASCADE
-);
-
-# university
-# TODO: create trigger to update u_numberstudentstud whenever new student is created
-# may change to DEFAULT 0 later
-CREATE TABLE university(
-	u_id int(11) NOT NULL AUTO_INCREMENT,
-	u_name varchar(30) NOT NULL,
-	u_numberstudents int(11) NOT NULL DEFAULT 0 ,
-	u_location varchar(100),
-	u_description varchar(255),
-	u_emaildomain varchar(20) NOT NULL,
-	u_imgage varbinary(max) NOT NULL,
-	PRIMARY KEY (u_id),
-	UNIQUE (u_emaildomain)
 );
 
 # su_affliation (student-university)
@@ -83,10 +83,13 @@ CREATE TABLE event(
 	e_email varchar(50),
 	e_public boolean,
 	e_private boolean,
-	e_rso int(11),
+	rso_id int(11),
+	u_id int(11) NOT NULL,
 	s_id int(11) NOT NULL,
 	PRIMARY KEY (e_id),
-	FOREIGN KEY (s_id) REFERENCES admin(s_id) ON DELETE CASCADE
+	FOREIGN KEY (s_id) REFERENCES admin(s_id) ON DELETE CASCADE,
+	FOREIGN KEY (rso_id) REFERENCES rso_member(rso_id) ON DELETE CASCADE,
+	FOREIGN KEY (u_id) REFERENCES university(u_id) ON DELETE CASCADE
 );
 
 # location
@@ -169,3 +172,42 @@ CREATE TABLE approve_private_event(
 	FOREIGN KEY (e_id) REFERENCES event(e_id) ON DELETE CASCADE,
 	FOREIGN KEY (s_id) REFERENCES superadmin(s_id) ON DELETE CASCADE
 );
+
+# subscriptions
+CREATE TABLE subscriptions(
+	sub_id int(11) NOT NULL AUTO_INCREMENT,
+	s_id int(11) NOT NULL,
+	e_id int (11),
+	u_id int(11) NOT NULL,
+	PRIMARY KEY (sub_id),
+	FOREIGN KEY (s_id) REFERENCES student(s_id) ON DELETE CASCADE,
+	FOREIGN KEY (e_id) REFERENCES event(e_id) ON DELETE CASCADE,
+	FOREIGN KEY (u_id) REFERENCES university(u_id) ON DELETE CASCADE
+);
+
+
+
+# insertions used for testing
+
+INSERT INTO student (s_firstname, s_lastname, s_username, s_password, s_email, u_id) VALUES ('Sally', 'Knight', 'sallyK', "asdf1234", 'SK@knights.ucf.edu', 1);
+INSERT INTO student (s_firstname, s_lastname, s_username, s_password, s_email, u_id) VALUES ('Ken', 'Williamson', 'kenW', "abc123", 'KW@knights.ucf.edu', 1);
+INSERT INTO student (s_firstname, s_lastname, s_username, s_password, s_email, u_id) VALUES ('Giani', 'Francis', 'gfrancis', "butthole", 'gfrancis@nyu.edu', 2);
+INSERT INTO student (s_firstname, s_lastname, s_username, s_password, s_email, u_id) VALUES ('Miguel', 'Chavez', 'mac123', "buttface", 'mac2@georgiatech.edu', 3);
+INSERT INTO student (s_firstname, s_lastname, s_username, s_password, s_email, u_id) VALUES ('Alexis', 'San Javier', 'ASJ', "ayaya", 'ASJ@ucberkley.edu', 4);
+
+INSERT INTO university (u_name, u_numberstudents, u_location, u_description, u_emaildomain) VALUES('University of Central Florida', 60000, 'Florida', 'Big Beautiful School in the heart of Central Florida', 'knights.ucf.edu');
+INSERT INTO university (u_name, u_numberstudents, u_location, u_description, u_emaildomain) VALUES('New York University', 20000, 'New York', 'Big Beautiful School in the heart of the Big Apple', 'nyu.edu');
+INSERT INTO university (u_name, u_numberstudents, u_location, u_description, u_emaildomain) VALUES('Georgia Technical University', 40000, 'Georgia', 'Big Beautiful School in the heart of Georgia', 'georgiatech.edu');
+INSERT INTO university (u_name, u_numberstudents, u_location, u_description, u_emaildomain) VALUES('University of California Berkley', 30000, 'California', 'Big Beautiful School in the heart of Southern California', 'ucberkley.edu');
+
+INSERT INTO event (e_name, e_date, e_time, e_description, e_phone, e_email, e_public, e_private, rso_id, u_id, s_id) VALUES ('Knights Palooza', '2017-06-11', '20:00:00', 'Big Party for New Students', "555-555-555", "KnightsPalooza@gmail.com", 1, 0, 1, 1, 1);
+INSERT INTO event (e_name, e_date, e_time, e_description, e_phone, e_email, e_public, e_private, rso_id, u_id, s_id) VALUES ('Knights Hacks', '2017-08-10', '12:00:00', 'Student Hackathon', '111-111-111', "KnightHacks@gmail.com", 1, 0, 1, 1, 2);
+INSERT INTO event (e_name, e_date, e_time, e_description, e_phone, e_email, e_public, e_private, rso_id, u_id, s_id) VALUES ('NYU Hacks', '2017-04-25', '23:00:00', 'Student Hackathon', "222-555-555", "NYUHacksa@gmail.com", 1, 0, 2, 2, 3);
+INSERT INTO event (e_name, e_date, e_time, e_description, e_phone, e_email, e_public, e_private, rso_id, u_id, s_id) VALUES ('NYU Womens March', '2017-09-10', '18:00:00', 'March to Celebrate Womens Rights', "444-555-555", "NYUWomen@gmail.com", 1, 0, 2, 2, 4);
+INSERT INTO event (e_name, e_date, e_time, e_description, e_phone, e_email, e_public, e_private, rso_id, u_id, s_id) VALUES ('Georgia Tech Hacks', '2017-07-23', '14:00:00', 'Student Hackathon', "333-555-555", "GTUHacks@gmail.com", 1, 0, 3, 3, 5);
+INSERT INTO event (e_name, e_date, e_time, e_description, e_phone, e_email, e_public, e_private, rso_id, u_id, s_id) VALUES ('UCB Hacks', '2017-12-16', '14:00:00', 'Student Hackathon', "666-555-555", "UCBHacks@gmail.com", 1, 0, 4, 4, 6);
+INSERT INTO event (e_name, e_date, e_time, e_description, e_phone, e_email, e_public, e_private, rso_id, u_id, s_id) VALUES ('UCB Multiciltural Night', '2017-10-08', '20:00:00', 'Celebration of Diversity', "777-555-555", "UCBDiversitya@gmail.com", 1, 0, 4, 4, 7);
+
+INSERT INTO comments (event_id, text) VALUES (2, "this presentation is awesome");
+INSERT INTO comments (event_id, text) VALUES (2, "this presentation is okay");
+INSERT INTO comments (event_id, text) VALUES (2, "this presentation is bad");

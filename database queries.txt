@@ -1,13 +1,14 @@
 
 /*all public events*/
-SELECT E.e_name
+SELECT *
 FROM event E
-WHERE E.e_public = 1;
+WHERE E.e_public = '1';
 
 /*all private events*/
-SELECT E.e_name
-FROM event E
-WHERE E.e_private = 1;
+SELECT E.e_name,
+FROM university U, admin A,  event E
+WHERE E.e_private = '1' AND U.u_id = S.u_id
+                        AND E.s_id = S.s_id;
 
 /*RSO events*/
 SELECT R.rso_name
@@ -27,4 +28,4 @@ WHERE S.s_id = A.s_id;
 /*Universities in Florida*/
 SELECT U.u_name
 FROM university U
-WHERE U.u_location = 'Florida';
+WHERE U.u_location = {u_location};
