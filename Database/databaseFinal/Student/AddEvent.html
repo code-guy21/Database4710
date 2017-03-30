@@ -10,18 +10,17 @@
 <link href="https://fonts.googleapis.com/css?family=Raleway:400,700|Shadows+Into+Light+Two" rel="stylesheet">
 
 <style>
-.jumbotron2 {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-right: 30px;
-  padding-left: 30px;
-  border-radius: 6px;
-
-  color: inherit;
-  background-color: #ffffff;
+.page-header img{
+  width: 100%;
+  max-height: 250px
 }
-body {
-    background-color: #00ffff;
+
+.main-text
+{
+    position: absolute;
+    top: 50px;
+    width: 96.66666666666666%;
+
 }
 /* Adds borders for tabs */
 .tab-content {
@@ -34,10 +33,6 @@ body {
     margin-bottom: 0;
 }
 
-m1 {
-  font-family: 'Shadows Into Light Two', cursive;
-  font-size: 500%;
-}
 m2{
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -51,12 +46,17 @@ m3{
 m4{
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
-  font-size: 150%;
+  font-size: 80%;
 }
 m5{
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
-  font-size: 105%;
+  font-size: 150%;
+}
+m6{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 100%;
 }
 </style>
 </head>
@@ -108,11 +108,16 @@ m5{
   <br>
 
 <div class="container">
-  <div class="page-header">
-  <m1>College Events</m1>
+  <div class="row">
+  <div class="page-header col-sm-12">
+    <div class="main-text col-sm-4 col-sm-offset-1">
+      <m1>College Events</m1>
+    </div>
+  <img class=".img-responsive center-block" src="../../pano_02.jpg" alt="First slide">
+  </div>
   </div>
   <div class="row">
-    <div class="jumbotron2 col-md-10 col-md-offset-1">
+    <div class="jumbotron3 col-md-10 col-md-offset-1">
     <m2> Creat Event </m2>
     <p><m4> Use the form below to creat a new Event. All Events will be approved by colleges administrator</m4></p>
 
@@ -129,19 +134,19 @@ m5{
       <label><m5> When: </m5></label>
       <div class="jumbotron">
         <div class="form-group">
-          <label><m5> Start: </m5></label>
+          <label><m6> Start: </m6></label>
           <m3> <input type="date" class ="form-control" id=EventDateStart ></m3>
           <m3> <input type="time" class ="form-control" id=EventDateStart ></m3>
         </div>
 
         <div class="form-group">
-          <label><m5> End: </m5></label>
+          <label><m6> End: </m6></label>
           <m3> <input type="date" class ="form-control" id=EventDateEnd ></m3>
           <m3> <input type="time" class ="form-control" id=EventDateEnd ></m3>
         </div>
 
         <div class="form-group">
-          <label><m5> Location: </m5></label>
+          <label><m6> Location: </m6></label>
           <m3> <input type="text" class ="form-control" id=EventTitle placeholder="Orlando,FL"></m3>
         </div>
       </div>
@@ -149,17 +154,17 @@ m5{
       <label><m5> Owner: </m5></label>
       <div class="jumbotron">
         <div class="form-group">
-          <label><m5> Name: </m5></label>
+          <label><m6> Name: </m6></label>
           <m3> <input type="text" class ="form-control" id=EventOwnerName placeholder="Name"></m3>
         </div>
 
         <div class="form-group">
-          <label><m5> Email: </m5></label>
+          <label><m6> Email: </m6></label>
           <m3> <input type="email" class ="form-control" id=EventOwnerEmail placeholder="Email"></m3>
           </div>
 
         <div class="form-group">
-          <label><m5> Phone: </m5></label>
+          <label><m6> Phone: </m6></label>
           <m3> <input type="phone" class ="form-control" id=EventOwnerPhone placeholder="Phone"></m3>
         </div>
       </div>
@@ -167,7 +172,8 @@ m5{
     <br>
     <div class="row">
       <div class="col-xs-2 col-xs-offset-5">
-      <m3> <a href="#" class="btn btn-primary btn-lg">Creat Event <span class="glyphicon glyphicon-calendar"></span></a> </m3>
+      <m3> <button type="submit" class="btn btn-primary btn-lg">Create Event <span class="glyphicon glyphicon-calendar"></span></button> </m3>
+
       </div>
     </div>
   </div>

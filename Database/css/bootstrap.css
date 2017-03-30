@@ -29,6 +29,17 @@ section,
 summary {
   display: block;
 }
+m1 {
+  font-family: 'Shadows Into Light Two', cursive;
+  font-size: 500%;
+
+  color: white;
+    text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
+}
 audio,
 canvas,
 progress,
@@ -1088,7 +1099,7 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
-  background-color: #fff;
+  background-color: #cdc680;
 }
 input,
 button,
@@ -1409,6 +1420,12 @@ a.bg-danger:hover,
 a.bg-danger:focus {
   background-color: #e4b9b9;
 }
+.page-header img{
+  width: 100%;
+  max-height: 250px
+}
+
+
 .page-header {
   padding-bottom: 9px;
   margin: 40px 0 20px;
@@ -2297,7 +2314,7 @@ th {
   background-color: #fff;
 }
 .table-condensed > thead > tr > th,
-.table-condensed > tbody > tr > th,
+.table-condensed > t > tr > th,
 .table-condensed > tfoot > tr > th,
 .table-condensed > thead > tr > td,
 .table-condensed > tbody > tr > td,
@@ -4962,7 +4979,7 @@ a.badge:focus {
   padding-bottom: 30px;
   margin-bottom: 30px;
   color: inherit;
-  background-color: #00ffff;
+  background-color: #cdc680;
 }
 .jumbotron h1,
 .jumbotron .h1 {

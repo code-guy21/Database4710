@@ -10,18 +10,17 @@
 <link href="https://fonts.googleapis.com/css?family=Raleway:400,700|Shadows+Into+Light+Two" rel="stylesheet">
 
 <style>
-.jumbotron2 {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-right: 30px;
-  padding-left: 30px;
-  border-radius: 6px;
-
-  color: inherit;
-  background-color: #ffffff;
+.page-header img{
+  width: 100%;
+  max-height: 250px
 }
-body {
-    background-color: #00ffff;
+
+.main-text
+{
+    position: absolute;
+    top: 50px;
+    width: 96.66666666666666%;
+
 }
 /* Adds borders for tabs */
 .tab-content {
@@ -32,11 +31,6 @@ body {
 }
 .nav-tabs {
     margin-bottom: 0;
-}
-
-m1 {
-  font-family: 'Shadows Into Light Two', cursive;
-  font-size: 500%;
 }
 m2{
   font-family: 'Raleway', sans-serif;
@@ -51,12 +45,17 @@ m3{
 m4{
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
-  font-size: 150%;
+  font-size: 80%;
 }
 m5{
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
-  font-size: 105%;
+  font-size: 150%;
+}
+m6{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 100%;
 }
 </style>
 </head>
@@ -107,11 +106,16 @@ m5{
   <br>
 
   <div class="container">
-    <div class="page-header">
-    <m1>College Events</m1>
+    <div class="row">
+    <div class="page-header col-sm-12">
+      <div class="main-text col-sm-4 col-sm-offset-1">
+        <m1>College Events</m1>
+      </div>
+    <img class=".img-responsive center-block" src="../../pano_02.jpg" alt="First slide">
+    </div>
     </div>
     <div class="row">
-      <div class="jumbotron2 col-md-10 col-md-offset-1">
+      <div class="jumbotron3 col-md-10 col-md-offset-1">
       <m2>Request RSO</m2>
       <p><m4> Use the form below to request a new Register Student Organization. All RSOs  will be approved by colleges administrator</m4></p>
 
@@ -135,34 +139,34 @@ m5{
         <label><m5> Students Information: </m5></label>
         <div class="jumbotron">
           <div class="form-group">
-            <label><m5> Student 1: </m5></label>
+            <label><m6> Student 1: </m6></label>
             <m3> <input type="text" placeholder="First Name" class ="form-control" id=RSOStud1FN ></m3>
             <m3> <input type="text" placeholder="Last Name" class ="form-control" id=RSOStud1LN  ></m3>
             <m3> <input type="email" placeholder="Email" class ="form-control" id=RSOStud1Email ></m3>
           </div>
 
           <div class="form-group">
-            <label><m5> Student 2: </m5></label>
+            <label><m6> Student 2: </m6></label>
             <m3> <input type="text" placeholder="First Name" class ="form-control" id=RSOStud2FN ></m3>
             <m3> <input type="text" placeholder="Last Name" class ="form-control" id=RSOStud2LN  ></m3>
             <m3> <input type="email" placeholder="Email" class ="form-control" id=RSOStud2Email ></m3>
           </div>
 
           <div class="form-group">
-            <label><m5> Student 3: </m5></label>
+            <label><m6> Student 3: </m6></label>
             <m3> <input type="text" placeholder="First Name" class ="form-control" id=RSOStud3FN ></m3>
             <m3> <input type="text" placeholder="Last Name" class ="form-control" id=RSOStud3LN  ></m3>
             <m3> <input type="email" placeholder="Email" class ="form-control" id=RSOStud3Email ></m3>
           </div>
 
           <div class="form-group">
-            <label><m5> Student 4: </m5></label>
+            <label><m6> Student 4: </m6></label>
             <m3> <input type="text" placeholder="First Name" class ="form-control" id=RSOStud4FN ></m3>
             <m3> <input type="text" placeholder="Last Name" class ="form-control" id=RSOStud4LN  ></m3>
             <m3> <input type="email" placeholder="Email" class ="form-control" id=RSOStud4Email ></m3>
           </div>
           <div class="form-group">
-            <label><m5> Student 5: </m5></label>
+            <label><m6> Student 5: </m6></label>
             <m3> <input type="text" placeholder="First Name" class ="form-control" id=RSOStud5FN ></m3>
             <m3> <input type="text" placeholder="Last Name" class ="form-control" id=RSOStud5LN  ></m3>
             <m3> <input type="email" placeholder="Email" class ="form-control" id=RSOStud5Email ></m3>
@@ -174,7 +178,7 @@ m5{
       <br>
       <div class="row">
         <div class="col-xs-2 col-xs-offset-5">
-        <m3> <a href="#" class="btn btn-primary btn-lg"> Request RSO <span class="glyphicon glyphicon-record"></span></a> </m3>
+        <m3> <button type="submit" class="btn btn-primary btn-lg">Request RSO <span class="glyphicon glyphicon-record"></span></button> </m3>
         </div>
       </div>
     </div>
