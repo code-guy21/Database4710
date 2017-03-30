@@ -71,16 +71,45 @@ app.get('/rsorequest', function(req, res) {
     res.sendFile(path.join(__dirname, '/views/MakeRSORequest.html'));
 });
 
-app.post('/myaction', function(req, res) {
+app.post('/home', function(req, res) {
+
+    var uname = req.body.uname;
+    var password = req.body.password;
+
+    connection.query("SELECT s_password FROM student WHERE s_username=?",uname, function(error,value){
+    if(error){
+      console.log('Error in the query');
+    }
+    if(value.length > 0){
+        if(value[0].s_password == password){
+
+          res.redirect('/home');
+          console.log('Login Successful');
+          console.log(value[0].s_password);
+          //res.write(value[0].s_password);
+        }
+        else{
+          console.log('Login was not successful');
+          res.redirect('/login');
+        }
+    }
+    else{
+      console.log('Login was not successful');
+      res.redirect('/login');
+    }
+  });
+
+});
+
+app.post('/', function(req, res) {
+
+    res.sendFile(path.join(__dirname, '/views/Main.html'));
 
     var fname = req.body.fname;
     var lname = req.body.lname;
     var uname = req.body.uname;
     var password = req.body.password;
     var email = req.body.email;
-
-    res.write(fname + lname + uname + password + email);
-    res.end()
 
     var submission = {
       s_firstname: fname,

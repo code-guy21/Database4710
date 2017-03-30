@@ -65,21 +65,20 @@ m4{
   <div class="jumbotron2">
   <p><m2> Login Please  </m2></p>
 
-  <form>
+  <form action="/home" method="post">
 
     <div class="form-group">
       <label><m2> Username: </m2></label>
-      <m3> <input type="text" class ="form-control" placeholder="Username"> </m3>
+      <m3> <input type="text" id="uname" name="uname" class ="form-control" placeholder="Username"> </m3>
     </div>
     <div class="form-group">
       <label> <m2> Password: </m2> </label>
-      <m3> <input type="password" class ="form-control" placeholder="Password"> </m3>
+      <m3> <input type="password" id="password" name="password" class ="form-control" placeholder="Password"> </m3>
     </div>
-  </form>
   <br>
   <div class="row">
   <div class="col-xs-2 col-xs-offset-5">
-  <m3> <a href="/home" class="btn btn-primary btn-lg"> Login in <span class="glyphicon glyphicon-log-in"></span></a> </m3>
+    <input class="btn btn-lg btn-primary btn-block" type="submit">
   </div>
   </div>
   <m4> <a href="/register" class"btn btn-default btn-lg" role="button">Not a user.....? Register!</a> </m4>
@@ -89,6 +88,7 @@ m4{
   </div>
 </div>
 
+  </form>
  
 
 </body>
