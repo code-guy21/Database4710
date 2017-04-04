@@ -38,6 +38,10 @@ m2{
   font-size: 250%;
 }
 m3{
+  font-weight: 700;
+  font-size: 105%;
+}
+mi3{
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 105%;
@@ -46,6 +50,16 @@ m4{
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
   font-size: 75%;
+}
+m5{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 130%;
+}
+m6{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 170%;
 }
 </style>
 </head>
@@ -81,14 +95,14 @@ m4{
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+          <li><a href="Home.html">Home</a></li>
           <li><a href="EventLookUp.html">Event LookUp</a></li>
           <li><a href="AddEvent.html">Add Events</a></li>
           <li><a href="MakeRsoRequest.html">Make RSO Request </a></li>
         </ul>
         <!-- navbar-left will move the search to the left -->
         <form class="navbar-form navbar-right" role="search">
-          <m3> Welcome, User!  &#160 &#160 </m3>
+          <mi3> Welcome, User!  &#160 &#160 </mi3>
           <a href="../Main/Main.html" class="btn btn-default" role="button">Sign Out</a>
         </form>
       </div><!-- /.navbar-collapse -->
@@ -96,48 +110,51 @@ m4{
   </nav>
   <br>
 
-<div class="container">
-  <div class="row">
-  <div class="page-header col-sm-12">
-    <div class="main-text col-sm-4 col-sm-offset-1">
-      <m1>College Events</m1>
-    </div>
-  <img class=".img-responsive center-block" src="../../pano_02.jpg" alt="First slide">
-  </div>
-  </div>
   <div class="container">
-  <div class="row">
-  <!-- jumbotron enlarges fonts and puts everything in a gray box with rounded corners. If jumbotron is outside a container it fills the total width. You can change the styles by placing the changes after the Bootstrap CDN link -->
-    <div class="container col-sm-8 col-xs-12">
-        <div class="jumbotron3">
-          <div class="container">
-          <div class="row">
-            <m2>Biggest Winner</m2>
-            <m3>All Day</m3>
-            <p><m4>The Biggest Winner challenge is a 12 week program (with a one week try out) designed to help students improve exercise and nutrition habits in order to improve total wellness, along with reducing the risk of chronic disease. Students will receive assistance and guidance from certified trainers to help implement healthy behavioral changes that will increase their quality of life.</m3></p>
-            <!-- <button id="MoreInfo" type="submit" class="btn btn-primary col-xs-offset-10 col-xs-2" role="button"> More Info</button> -->
-            <a href="EventInfo.html" id="MoreInfo" type="submit" class="btn btn-primary col-xs-offset-10 col-xs-2" role="button"> More Info</a>
-          </div>
-          </div>
-        </div>
-        <div class="jumbotron3">
-          <div class="container">
-          <div class="row">
-            <m2>Biggest Winner</m2>
-            <m3>All Day</m3>
-            <p><m4>The Biggest Winner challenge is a 12 week program (with a one week try out) designed to help students improve exercise and nutrition habits in order to improve total wellness, along with reducing the risk of chronic disease. Students will receive assistance and guidance from certified trainers to help implement healthy behavioral changes that will increase their quality of life.</m3></p>
-            <button id="MoreInfo" type="submit" class="btn btn-primary col-xs-offset-10 col-xs-2" role="button"> More Info</button>
-          </div>
-          </div>
-        </div>
-
+    <div class="row">
+    <div class="page-header col-sm-12">
+      <div class="main-text col-sm-4 col-sm-offset-1">
+        <m1>College Events</m1>
+      </div>
+    <img class=".img-responsive center-block" src="../../pano_02.jpg" alt="First slide">
     </div>
+    </div>
+    <div class="row">
+      <div class="jumbotron3 col-md-10 col-md-offset-1">
+      <m2> Biggest Winner </m2>
+      <p><m4> The Biggest Winner challenge is a 12 week program (with a one week try out) designed to help students improve exercise and nutrition habits in order to improve total wellness, along with reducing the risk of chronic disease. Students will receive assistance and guidance from certified trainers to help implement healthy behavioral changes that will increase their quality of life.</m4></p>
 
-    <div class="container col-sm-3 col-sm-offset-1 col-xs-9 col-xs-offset-3">
-    		<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=250&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=e0h4818hvufcc311ebo7meusdo%40group.calendar.google.com&amp;color=%230F4B38&amp;ctz=America%2FNew_York" style="border:solid 1px #777" width="250" height="250" frameborder="0" scrolling="no"></iframe></div>
-   </div>
- </div>
- </div>
 
-</body>
-</html>
+      <label><m6> When: </m6></label>
+        <div class="jumbotron">
+          <div class="jumbotron3">
+              <label><m5> Start: </m5></label> <m3> 12:00 PM 1/1/1994 </m3>
+              <br>
+              <br>
+              <label><m5> End: </m5></label> <m3> 5:00 PM 1/1/1994 </m3>
+              <br>
+              <br>
+              <label><m5> Location </m5></label> <m3> 4000 Central Florida Blvd. Orlando, Florida, 32816 </m3>
+            </div>
+        </div>
+
+      <label><m6> Event Coordinator: </m6></label>
+      <div class="jumbotron">
+        <div class="jumbotron3">
+            <label><m5> Name: </m5></label> <m3> Miguel Chavez </m3>
+            <br>
+            <br>
+            <label><m5> Email: </m5></label>
+            <m3><a href="mailto:VGA@knights.ucf.edu?Subject=Hello%20again" target="_top"> VGA@knights.ucf.edu</a> </m3>
+            <br>
+            <br>
+            <label><m5> Phone </m5></label> <m3> 407.777.7777 </m3>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  </body>
+  </html>

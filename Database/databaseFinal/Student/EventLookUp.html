@@ -47,6 +47,11 @@ m4{
   font-weight: 400;
   font-size: 75%;
 }
+m5{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 150%;
+}
 </style>
 </head>
 <body>
@@ -105,6 +110,51 @@ m4{
   <img class=".img-responsive center-block" src="../../pano_02.jpg" alt="First slide">
   </div>
   </div>
+
+
+  <form>
+  <div class="jumbotron3">
+  <p><m5> Search </m5> <m4>By Date, time, Location, University, Event Coordinator, RSO <m4></p>
+  <div class="row">
+  <div class="jumbotron3 col-md-6">
+    <div class="form-group">
+      <label><m5> Start: </m5></label>
+      <m3> <input id="startdate" type="date" class ="form-control" ></m3>
+      <m3> <input id="starttime" type="time" class ="form-control" ></m3>
+    </div>
+    <div class="form-group">
+      <label><m5> Location: </m5></label>
+      <m3> <input id="location" type="text" class ="form-control" placeholder="Orlando,FL"></m3>
+    </div>
+    <div class="form-group">
+      <label><m5> Event Coorniator: </m5></label>
+      <m3> <input id="coorname" type="text" class ="form-control" placeholder="Name"></m3>
+    </div>
+  </div>
+  <div class="jumbotron3 col-md-6">
+    <div class="form-group">
+      <label><m5> End: </m5></label>
+      <m3> <input id="enddate" type="date" class ="form-control" ></m3>
+      <m3> <input id="endtime" type="time" class ="form-control" ></m3>
+    </div>
+    <div class="form-group">
+      <label><m5> University: </m5></label>
+      <m3> <input id="university" type="text" class ="form-control" placeholder="University of Central Florida"></m3>
+    </div>
+    <div class="form-group">
+      <label><m5> RSO: </m5></label>
+      <m3> <input id="rsoname" type="text" class ="form-control" placeholder="RSO Name"></m3>
+    </div>
+  </div>
+  <div class="col-xs-2 col-xs-offset-5">
+  <m3> <button type="submit" class="btn btn-primary btn-lg">Search <span class="glyphicon glyphicon-log-in"></span></button> </m3>
+  </div>
+</div>
+</div>
+</form>
+
+  </div>
+</div>
   <div class="container">
   <div class="row">
   <!-- jumbotron enlarges fonts and puts everything in a gray box with rounded corners. If jumbotron is outside a container it fills the total width. You can change the styles by placing the changes after the Bootstrap CDN link -->
@@ -115,10 +165,13 @@ m4{
             <m2>Biggest Winner</m2>
             <m3>All Day</m3>
             <p><m4>The Biggest Winner challenge is a 12 week program (with a one week try out) designed to help students improve exercise and nutrition habits in order to improve total wellness, along with reducing the risk of chronic disease. Students will receive assistance and guidance from certified trainers to help implement healthy behavioral changes that will increase their quality of life.</m3></p>
-            <button type="submit" class="btn btn-success col-xs-2 col-xs-offset-8"> Join</input>
-            <button type="button" class="btn btn-danger col-xs-2" role="button"> Decline</button>
+            <button id="Join" type="submit" class="btn btn-success col-xs-2 col-xs-offset-6"> Join</input>
+            <button id="Decline" type="submit" class="btn btn-danger col-xs-2" role="button"> Decline</button>
+            <!--<button id="MoreInfo" type="submit" class="btn btn-primary col-xs-2" role="button"> More Info</button> -->
+            <a href="EventInfo.html" id="MoreInfo" type="submit" class="btn btn-primary col-xs-2" role="button"> More Info</a>
           </div>
           </div>
+        <a href="home.html" class=""> </a>
         </div>
         <div class="jumbotron3">
           <div class="container">
@@ -126,8 +179,9 @@ m4{
             <m2>Biggest Winner</m2>
             <m3>All Day</m3>
             <p><m4>The Biggest Winner challenge is a 12 week program (with a one week try out) designed to help students improve exercise and nutrition habits in order to improve total wellness, along with reducing the risk of chronic disease. Students will receive assistance and guidance from certified trainers to help implement healthy behavioral changes that will increase their quality of life.</m3></p>
-            <button type="submit" class="btn btn-success col-xs-2 col-xs-offset-8"> Join</input>
-            <button type="button" class="btn btn-danger col-xs-2" role="button"> Decline</button>
+            <button id="Join" type="submit" class="btn btn-success col-xs-2 col-xs-offset-6"> Join</input>
+            <button id="Decline" type="submit" class="btn btn-danger col-xs-2" role="button"> Decline</button>
+            <button id="MoreInfo" type="submit" class="btn btn-primary col-xs-2" role="button"> More Info</button>
           </div>
           </div>
         </div>
