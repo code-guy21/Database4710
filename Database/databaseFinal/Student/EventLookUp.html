@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width = device-width, initial-scale = 1">
+<title>Home</title>
+
+<link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway:400,700|Shadows+Into+Light+Two" rel="stylesheet">
+
+<style>
+.page-header img{
+  width: 100%;
+  max-height: 250px
+}
+
+.main-text
+{
+    position: absolute;
+    top: 50px;
+    width: 96.66666666666666%;
+
+}
+/* Adds borders for tabs */
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+.nav-tabs {
+    margin-bottom: 0;
+}
+m2{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 250%;
+}
+m3{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 105%;
+}
+m4{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 75%;
+}
+m5{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 150%;
+}
+</style>
+</head>
+<body>
+
+  <!-- Collapsible Navigation Bar -->
+
+
+  <!-- .navbar-fixed-top, or .navbar-fixed-bottom can be added to keep the nav bar fixed on the screen -->
+  <!-- <nav class="navbar navbar-fixed-top"> -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+
+        <!-- Button that toggles the navbar on and off on small screens -->
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+
+        <!-- Hides information from screen readers -->
+          <span class="sr-only"></span>
+
+          <!-- Draws 3 bars in navbar button when in small mode -->
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <!-- You'll have to add padding in your image on the top and right of a few pixels (CSS Styling will break the navbar) -->
+        <!--<a class="pull-left" href="#"><img src="NTTLogosm.png"></a> -->
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="Home.html">Home</a></li>
+          <li class="active"><a href="#">Event LookUp <span class="sr-only">(current)</span></a></li>
+          <li><a href="AddEvent.html">Add Events</a></li>
+          <li><a href="MakeRsoRequest.html">Make RSO Request </a></li>
+        </ul>
+        <!-- navbar-left will move the search to the left -->
+        <form class="navbar-form navbar-right" role="search">
+          <m3> Welcome, User!  &#160 &#160 </m3>
+          <a href="../Main/Main.html" class="btn btn-default" role="button">Sign Out</a>
+        </form>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <br>
+
+<div class="container">
+  <div class="row">
+  <div class="page-header col-sm-12">
+    <div class="main-text col-sm-4 col-sm-offset-1">
+      <m1>College Events</m1>
+    </div>
+  <img class=".img-responsive center-block" src="../../pano_02.jpg" alt="First slide">
+  </div>
+  </div>
+
+
+  <form>
+  <div class="jumbotron3">
+  <p><m5> Search </m5> <m4>By Date, time, Location, University, Event Coordinator, RSO <m4></p>
+  <div class="row">
+  <div class="jumbotron3 col-md-6">
+    <div class="form-group">
+      <label><m5> Start: </m5></label>
+      <m3> <input id="startdate" type="date" class ="form-control" ></m3>
+      <m3> <input id="starttime" type="time" class ="form-control" ></m3>
+    </div>
+    <div class="form-group">
+      <label><m5> Location: </m5></label>
+      <m3> <input id="location" type="text" class ="form-control" placeholder="Orlando,FL"></m3>
+    </div>
+    <div class="form-group">
+      <label><m5> Event Coorniator: </m5></label>
+      <m3> <input id="coorname" type="text" class ="form-control" placeholder="Name"></m3>
+    </div>
+  </div>
+  <div class="jumbotron3 col-md-6">
+    <div class="form-group">
+      <label><m5> End: </m5></label>
+      <m3> <input id="enddate" type="date" class ="form-control" ></m3>
+      <m3> <input id="endtime" type="time" class ="form-control" ></m3>
+    </div>
+    <div class="form-group">
+      <label><m5> University: </m5></label>
+      <m3> <input id="university" type="text" class ="form-control" placeholder="University of Central Florida"></m3>
+    </div>
+    <div class="form-group">
+      <label><m5> RSO: </m5></label>
+      <m3> <input id="rsoname" type="text" class ="form-control" placeholder="RSO Name"></m3>
+    </div>
+  </div>
+  <div class="col-xs-2 col-xs-offset-5">
+  <m3> <button type="submit" class="btn btn-primary btn-lg">Search <span class="glyphicon glyphicon-log-in"></span></button> </m3>
+  </div>
+</div>
+</div>
+</form>
+
+  </div>
+</div>
+  <div class="container">
+  <div class="row">
+  <!-- jumbotron enlarges fonts and puts everything in a gray box with rounded corners. If jumbotron is outside a container it fills the total width. You can change the styles by placing the changes after the Bootstrap CDN link -->
+    <div class="container col-sm-8 col-xs-12">
+        <div class="jumbotron3">
+          <div class="container">
+          <div class="row">
+            <m2>Biggest Winner</m2>
+            <m3>All Day</m3>
+            <p><m4>The Biggest Winner challenge is a 12 week program (with a one week try out) designed to help students improve exercise and nutrition habits in order to improve total wellness, along with reducing the risk of chronic disease. Students will receive assistance and guidance from certified trainers to help implement healthy behavioral changes that will increase their quality of life.</m3></p>
+            <button id="Join" type="submit" class="btn btn-success col-xs-2 col-xs-offset-6"> Join</input>
+            <button id="Decline" type="submit" class="btn btn-danger col-xs-2" role="button"> Decline</button>
+            <!--<button id="MoreInfo" type="submit" class="btn btn-primary col-xs-2" role="button"> More Info</button> -->
+            <a href="EventInfo.html" id="MoreInfo" type="submit" class="btn btn-primary col-xs-2" role="button"> More Info</a>
+          </div>
+          </div>
+        <a href="home.html" class=""> </a>
+        </div>
+        <div class="jumbotron3">
+          <div class="container">
+          <div class="row">
+            <m2>Biggest Winner</m2>
+            <m3>All Day</m3>
+            <p><m4>The Biggest Winner challenge is a 12 week program (with a one week try out) designed to help students improve exercise and nutrition habits in order to improve total wellness, along with reducing the risk of chronic disease. Students will receive assistance and guidance from certified trainers to help implement healthy behavioral changes that will increase their quality of life.</m3></p>
+            <button id="Join" type="submit" class="btn btn-success col-xs-2 col-xs-offset-6"> Join</input>
+            <button id="Decline" type="submit" class="btn btn-danger col-xs-2" role="button"> Decline</button>
+            <button id="MoreInfo" type="submit" class="btn btn-primary col-xs-2" role="button"> More Info</button>
+          </div>
+          </div>
+        </div>
+
+    </div>
+
+    <div class="container col-sm-3 col-sm-offset-1 col-xs-9 col-xs-offset-3">
+    		<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=250&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=e0h4818hvufcc311ebo7meusdo%40group.calendar.google.com&amp;color=%230F4B38&amp;ctz=America%2FNew_York" style="border:solid 1px #777" width="250" height="250" frameborder="0" scrolling="no"></iframe></div>
+   </div>
+ </div>
+ </div>
+
+</body>
+</html>

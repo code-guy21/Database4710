@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width = device-width, initial-scale = 1">
+<title>Bootstrap Tutorial</title>
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+ 
+<style>
+
+
+.jumbotron{
+    background-color:#2E2D88;
+    color:white;
+}
+/* Adds borders for tabs */
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+.nav-tabs {
+    margin-bottom: 0;
+}
+
+.item {
+    height: 200px;
+}
+
+/* Carousel Styles */
+.carousel-indicators .active {
+    background-color: #2980b9;
+}
+
+.carousel-inner img {
+    width: 130%;
+    max-height: 250px
+}
+
+.carousel-control {
+    width: 0;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+	opacity: 1;
+	filter: alpha(opacity=100);
+	background-image: none;
+	background-repeat: no-repeat;
+	text-shadow: none;
+}
+
+.carousel-control.left span {
+	padding: 15px;
+}
+
+.carousel-control.right span {
+	padding: 15px;
+}
+
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right,
+.carousel-control .icon-prev,
+.carousel-control .icon-next {
+	position: absolute;
+	top: 45%;
+	z-index: 5;
+	display: inline-block;
+}
+
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .icon-prev {
+	left: 0;
+}
+
+.carousel-control .glyphicon-chevron-right,
+.carousel-control .icon-next {
+	right: 0;
+}
+
+.carousel-control.left span,
+.carousel-control.right span {
+	background-color: #000;
+}
+
+.carousel-control.left span:hover,
+.carousel-control.right span:hover {
+	opacity: .7;
+	filter: alpha(opacity=70);
+}
+
+
+.main-text
+{
+    position: absolute;
+    top: 50px;
+    width: 96.66666666666666%;
+    color: #FFF;
+}
+.btn-min-block
+{
+    min-width: 170px;
+    line-height: 26px;
+}
+.btn-clear
+{
+    color: #FFF;
+    background-color: transparent;
+    border-color: #FFF;
+    margin-right: 15px;
+}
+.btn-clear:hover
+{
+    color: #000;
+    background-color: #FFF;
+}
+</style>
+
+</head>
+<body>
+
+  <!-- Collapsible Navigation Bar -->
+
+
+  <!-- .navbar-fixed-top, or .navbar-fixed-bottom can be added to keep the nav bar fixed on the screen -->
+  <!-- <nav class="navbar navbar-fixed-top"> -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+
+        <!-- Button that toggles the navbar on and off on small screens -->
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+
+        <!-- Hides information from screen readers -->
+          <span class="sr-only"></span>
+
+          <!-- Draws 3 bars in navbar button when in small mode -->
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <!-- You'll have to add padding in your image on the top and right of a few pixels (CSS Styling will break the navbar) -->
+        <!--<a class="pull-left" href="#"><img src="NTTLogosm.png"></a> -->
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+          <li><a href="#">Look Events</a></li>
+          <li><a href="#">Add Events</a></li>
+          <li><a href="#">Make RSO</a></li>
+        </ul>
+        <!-- navbar-left will move the search to the left -->
+        <form class="navbar-form navbar-right" role="search">
+          <button type="submit" class="btn btn-default">Sign Out</button>
+        </form>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <br>
+
+<div class="container">
+  <div class="page-header">
+          <div id="carousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel" data-slide-to="1"></li>
+                <li data-target="#carousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                  <div class="carousel-caption d-none d-md-block text-left">
+                    <img class=".img-responsive center-block" src="pano_01.jpg" alt="First slide">
+                  </div>
+                </div>
+                <div class="item second">
+                  <div class="carousel-caption d-none d-md-block text-left">
+                      <img class="img-fluid" src="pano_02.jpg" alt="Second slide">
+                  </div>
+                </div>
+                <div class="item third">
+                  <div class="carousel-caption d-none d-md-block text-left">
+                    <img class="center-block" src="pano_03.jpg" alt="third slide">
+                  </div>
+                </div>
+      <!--
+            </div>
+
+            <a href="#carousel" class="left carousel-control" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a href="#carousel" class="right carousel-control" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+          </div>
+        -->
+
+          <div class="main-text hidden-xs">
+                <div class="col-md-12 text-center">
+                    <h1>College Events</h1>
+                </div>
+          </div>
+          </div>
+      </div>
+
+ </div>
+ </div>
+
+ <div class="container">
+  
+ <!-- We can add text or buttons on the right and/or left of input elements. Use input-group-lg or input-group-sm for input sizing -->
+ <div class="input-group input-group-lg">
+   <span class="input-group-addon">Your name</span>
+   <input type="text" class="form-control" placeholder="Full Name">
+ </div><br>
+  
+ <div class="input-group input-group-sm">
+   <input type="text" class="form-control" placeholder="Full Name">
+   <span class="input-group-btn">
+     <button class="btn btn-default" type="button">Enter</button>
+   </span>
+ </div>
+  
+ <!-- Create input button dropdowns. aria-haspopup states that input has a sub menu. aria-expanded closes the dropdown by default -->
+ <div class="row">
+     <div class="input-group">
+       <div class="input-group-btn">
+         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">User ID <span class="caret"></span></button>
+         <ul class="dropdown-menu">
+           <li><a href="#">Facebook</a></li>
+           <li><a href="#">Twitter</a></li>
+           <li><a href="#">Google+</a></li>
+         </ul>
+       </div>
+       <input type="text" class="form-control" aria-label="...">
+     </div>
+ </div>
+ </div>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script>
+            $("#carousel").carousel();
+        </script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width = device-width, initial-scale = 1">
+<title>Bootstrap Tutorial</title>
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+ 
+<style>
+.jumbotron{
+    background-color:#2E2D88;
+    color:white;
+}
+/* Adds borders for tabs */
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+.nav-tabs {
+    margin-bottom: 0;
+}
+</style>
+</head>
+<body>
+
+
+  <!-- NAVIGATION ELEMENTS -->
+  <div class="container">
+
+  <!-- Basic horizontal menu -->
+  <ul class="list-inline">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+
+    <!-- Add a dropdown menu -->
+    <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact
+      <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Phone</a></li>
+        <li><a href="#">Email</a></li>
+        <li><a href="#">Achedule Appointment</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Shop</a></li>
+  </ul>
+
+  <!-- Basic vertical menu -->
+  <ul class="nav nav-pills nav-stacked">
+    <li class="active"><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+
+    <!-- Add drop down menu -->
+    <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact
+      <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Phone</a></li>
+        <li><a href="#">Email</a></li>
+        <li><a href="#">Schedule Appointment</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Shop</a></li>
+  </ul>
+
+  <!-- Use nav-pills, nav-tabs. To center tabs add nav-justified to the class for ul -->
+  <ul class="nav nav-pills">
+    <li class="active"><a data-toggle="tab" href="#superman">Superman</a></li>
+    <li><a data-toggle="tab" href="#batman">Batman</a></li>
+
+    <!-- Dropdown menu item -->
+    <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Flash
+      <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+
+        <!-- Disable a tab -->
+        <li class="disabled"><a data-toggle="tab" href="#flash">The Flash</a></li>
+        <li><a data-toggle="tab" href="#kidflash">Kid Flash</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="superman" class="tab-pane fade in active">
+      <p>Superman is a fictional superhero appearing in American comic books published by DC Comics. </p>
+    </div>
+    <div id="batman" class="tab-pane fade">
+      <p>Batman is a fictional superhero appearing in American comic books published by DC Comics. </p>
+    </div>
+    <div id="flash" class="tab-pane fade">
+      <p>The Flash is a fictional superhero appearing in American comic books published by DC Comics. </p>
+    </div>
+    <div id="kidflash" class="tab-pane fade">
+      <p>Kid Flash is a fictional superhero appearing in American comic books published by DC Comics. </p>
+    </div>
+  </div>
+
+  </div>
+
+ 
+
+</body>
+</html>

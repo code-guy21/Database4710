@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+ 
+<!-- If IE use the latest rendering engine -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+ 
+<!-- Set the page to the width of the device and set the zoon level -->
+<meta name="viewport" content="width = device-width, initial-scale = 1">
+<title>Bootstrap Tutorial</title>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+ <!--
+<style>
+.jumbotron{
+    background-color:#2E2D88;
+    color:white;
+}
+/* Adds borders for tabs */
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+.nav-tabs {
+    margin-bottom: 0;
+}
+</style>
+ -->
+</head>
+<body>
+
+<div class="container">
+
+<div class="row">
+
+<!--
+  this is to have a blank 6 on the rigth side
+  but this can be complished with
+  <div class= "col-md-6 col-md-offset 6">
+-->
+  <div class="col-md-6"></div>
+  <div class="col-md-6">
+
+    <!-- The table class adds nice spacing and the other classes add additional style -->
+    <table class="table table-bordered table-striped table-hover">
+    <thead>
+    <tr>
+    <td colspan="4">Best Baseball Players</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+ 
+    <!-- You can adjust the width of table columns as well -->
+    <th class="col-md-2"></td>
+ 
+    <!-- Use text alignment like text-center or text-right -->
+    <th class="text-center">Average</td>
+    <th class="text-center">RBIs</td>
+    <th class="text-center">Homeruns</td>
+    </tr>
+    <tr>
+    <td><a href="#">Hank Aaron*</a></td>
+    <td>.305</td>
+    <td>2297</td>
+    <td>755</td>
+    </tr>
+    <tr>
+    <td><a href="#">Babe Ruth*</a></td>
+    <td>.342</td>
+    <td>2214</td>
+    <td>714</td>
+    </tr>
+    <tr>
+    <td><a href="#">Barry Bonds</a></td>
+    <td>.298</td>
+    <td>1996</td>
+    <td>762</td>
+    </tr>
+    </tbody>
+    </table>
+
+  </div>
+</div>
+
+<div class="well hidden-sm hidden-md hidden-lg">
+<p> Sceeen &lt; 768px</p>
+</div>
+
+<div class="well  hidden-md hidden-lg">
+<p> Sceeen &gt;= 768px  and &lt; 992px</p>
+</div>
+
+<div class="well hidden-lg">
+<p> Sceeen &gt;= 992px  and &lt; 1200px</p>
+</div>
+
+<div class="well">
+<p> Sceeen &lt; 1200px</p>
+</div>
+<div class="row">
+    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
+        <h4><a href="#col1Content" data-toggle="collapse">Column 1</a></h4>
+
+        <div id="col1Content" class="collapse in"> Nasalize cognisant psychoanalyzed revitalize laboured
+          authorizations. Legalized ploughshares customized westernized ploughing immobilization. Amphitheatre
+          energizer's demobilizing liberalized particularize moustache. Scrutinizing factorizing tyrannizing
+          individualize itemization varicoloured. Lionizing attitudinize arboures ploughing cudgelling cataloguer's.
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-8 col-xs-12">
+      <h4><a href="#col2Content" data-toggle="collapse">Column 2</a></h4>
+
+      <div id="col2Content" class="collapse">  Sentimentalized unravelled moisturizes winterize millilitres disorganizing.
+        Updraughts humanizer's privatizes watercolours prejudgement idealizes. Homogenization metastasizes stabilizing
+        vapourizer's empathized groveller's. Evangelize sympathizing agonize demilitarization conceptualizing editorialized.
+        Aggrandizing tantalized pluralize equalizes modernizing characterization.</div>
+    </div>
+
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      <h4><a href="#col3Content" data-toggle="collapse">Column 3</a></h4>
+
+      <div id="col3Content" class="collapse"> Tyned routinize verbalizing travellers synopsizes sulphuring.
+        Orthopaedic hiccough liquidize centilitres immunizations impanelling. Economize traumatize miaows politicized
+        orthopaedist's canonizations. Colourfully metastasize internationalized canonizing neighbourliness's metabolized. </div>
+    </div>
+
+</div>
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <h4> Column 1 </h4>
+          Miguel  has a daugther name Anika. Anika is the cutest baby in the world. she is 15 months young. She likes to be a
+          trouble maker. She gets into all the things
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <h4> Column 2 </h4>
+          Miguel  has a daugther name Anika. Anika is the cutest baby in the world. she is 15 months young. She likes to be a
+          trouble maker. She gets into all the things
+      </div>
+      <div class="clearfix visible-sm"> </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+          <h4> Column 3 </h4>
+            Miguel  has a daugther name Anika. Anika is the cutest baby in the world. she is 15 months young. She likes to be a
+            trouble maker. She gets into all the things
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+          <h4> Column 4 </h4>
+            Miguel  has a daugther name Anika. Anika is the cutest baby in the world. she is 15 months young. She likes to be a
+            trouble maker. She gets into all the things
+      </div>
+    </div>
+
+  </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</body>
+</html>

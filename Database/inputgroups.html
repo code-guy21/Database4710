@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+ 
+<!-- If IE use the latest rendering engine -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+ 
+<!-- Set the page to the width of the device and set the zoon level -->
+<meta name="viewport" content="width = device-width, initial-scale = 1">
+<title>Bootstrap Tutorial</title>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+ 
+<style>
+.jumbotron{
+    background-color:#2E2D88;
+    color:white;
+}
+/* Adds borders for tabs */
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+.nav-tabs {
+    margin-bottom: 0;
+}
+</style>
+ 
+</head>
+<body>
+
+
+<div class="container">
+ 
+<!-- We can add text or buttons on the right and/or left of input elements. Use input-group-lg or input-group-sm for input sizing -->
+<div class="input-group input-group-lg">
+  <span class="input-group-addon">Your name</span>
+  <input type="text" class="form-control" placeholder="Full Name">
+</div><br>
+ 
+<div class="input-group input-group-sm">
+  <input type="text" class="form-control" placeholder="Full Name">
+  <span class="input-group-btn">
+    <button class="btn btn-default" type="button">Enter</button>
+  </span>
+</div>
+ 
+<!-- Create input button dropdowns. aria-haspopup states that input has a sub menu. aria-expanded closes the dropdown by default -->
+<div class="row">
+    <div class="input-group">
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">User ID <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Google+</a></li>
+        </ul>
+      </div>
+      <input type="text" class="form-control" aria-label="...">
+    </div>
+</div>
+ 
+<!-- Input radio and checkboxes -->
+<div class="row">
+    <div class="input-group">
+      <span class="input-group-addon">
+ 
+        <!-- Change to radio for radio -->
+        <input type="checkbox">
+      </span>
+      <input type="text" class="form-control">
+    </div>
+</div>
+ 
+</div>
+
+</body>
+</html>
