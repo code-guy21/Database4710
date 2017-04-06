@@ -1,0 +1,34 @@
+<html>
+<head> <title> Hello </title> </head>
+<script type="text/javascript">
+
+    $ctra = 1;
+    $ctr1a = 1;
+    function add() {
+    alert('s')
+    var ni = document.getElementById('myDiv');
+    var numi = document.getElementById('theValue');
+    var num = (document.getElementById('theValue').value -1)+ 2;
+    numi.value = num;
+    var newdiv = document.createElement('div');
+    var divIdName = 'my'+num+'Div';
+    newdiv.setAttribute('id',divIdName);
+    newdiv.innerHTML = "<table border=1><tr><td> Hello! <input type='hidden' value='0' id='theValue' /></tr></table>";
+    if($ctra<100){
+        ni.appendChild(newdiv);
+        $ctra++;
+    }
+}
+
+</script>
+
+<body onload="add()">
+<table border="1">
+    <tr>
+        <td> Hello! <input type='hidden' value='0' id='theValue' />
+
+        <div id='myDiv'> </div> </td>
+    </tr>
+</table>
+</body>
+</html>
