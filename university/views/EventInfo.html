@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width = device-width, initial-scale = 1">
+<title>Home</title>
+
+<link rel="stylesheet" type="text/css" href="../stylesheets/bootstrap.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway:400,700|Shadows+Into+Light+Two" rel="stylesheet">
+
+<style>
+.page-header img{
+  width: 100%;
+  max-height: 250px
+}
+
+.main-text
+{
+    position: absolute;
+    top: 50px;
+    width: 96.66666666666666%;
+
+}
+/* Adds borders for tabs */
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+.nav-tabs {
+    margin-bottom: 0;
+}
+m2{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 250%;
+}
+m3{
+  font-weight: 700;
+  font-size: 105%;
+}
+mi3{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 105%;
+}
+m4{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 75%;
+}
+m5{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 130%;
+}
+m6{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 170%;
+}
+</style>
+</head>
+<body>
+
+  <!-- Collapsible Navigation Bar -->
+
+
+  <!-- .navbar-fixed-top, or .navbar-fixed-bottom can be added to keep the nav bar fixed on the screen -->
+  <!-- <nav class="navbar navbar-fixed-top"> -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+
+        <!-- Button that toggles the navbar on and off on small screens -->
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+
+        <!-- Hides information from screen readers -->
+          <span class="sr-only"></span>
+
+          <!-- Draws 3 bars in navbar button when in small mode -->
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <!-- You'll have to add padding in your image on the top and right of a few pixels (CSS Styling will break the navbar) -->
+        <!--<a class="pull-left" href="#"><img src="NTTLogosm.png"></a> -->
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="/home">Home</a></li>
+          <li><a href="/lookup">Event LookUp</a></li>
+          <li><a href="/addevent">Add Events</a></li>
+          <li><a href="/rsorequest">Make RSO Request </a></li>
+        </ul>
+        <!-- navbar-left will move the search to the left -->
+        <form class="navbar-form navbar-right" role="search">
+          <mi3> Welcome, User!  &#160 &#160 </mi3>
+          <a href="/" class="btn btn-default" role="button">Sign Out</a>
+        </form>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <br>
+
+  <div class="container">
+    <div class="row">
+    <div class="page-header col-sm-12">
+      <div class="main-text col-sm-4 col-sm-offset-1">
+        <m1>College Events</m1>
+      </div>
+    <img class=".img-responsive center-block" src="../../pano_02.jpg" alt="First slide">
+    </div>
+    </div>
+    <div class="row">
+      <div class="jumbotron3 col-md-10 col-md-offset-1">
+      <m2> Biggest Winner </m2>
+      <p><m4> The Biggest Winner challenge is a 12 week program (with a one week try out) designed to help students improve exercise and nutrition habits in order to improve total wellness, along with reducing the risk of chronic disease. Students will receive assistance and guidance from certified trainers to help implement healthy behavioral changes that will increase their quality of life.</m4></p>
+
+
+      <label><m6> When: </m6></label>
+        <div class="jumbotron">
+          <div class="jumbotron2">
+              <label><m5> Start: </m5></label> <m3> 12:00 PM 1/1/1994 </m3>
+              <br>
+              <br>
+              <label><m5> End: </m5></label> <m3> 5:00 PM 1/1/1994 </m3>
+              <br>
+              <br>
+              <label><m5> Location </m5></label> <m3> 4000 Central Florida Blvd. Orlando, Florida, 32816 </m3>
+            </div>
+        </div>
+
+      <label><m6> Event Coordinator: </m6></label>
+      <div class="jumbotron">
+        <div class="jumbotron2">
+            <label><m5> Name: </m5></label> <m3> Miguel Chavez </m3>
+            <br>
+            <br>
+            <label><m5> Email: </m5></label>
+            <m3><a href="mailto:VGA@knights.ucf.edu?Subject=Hello%20again" target="_top"> VGA@knights.ucf.edu</a> </m3>
+            <br>
+            <br>
+            <label><m5> Phone </m5></label> <m3> 407.777.7777 </m3>
+          </div>
+        </div>
+
+        <label><m6> Comments: </m6></label>
+        <div class="jumbotron">
+          <div class="jumbotron2">
+            <div class="container">
+            <div class="row">
+              <div class="form-group ">
+                <label><m5> New Comment: </m5></label>
+                <m3><textarea class="form-control" placeholder="Type comment here..." id="comment" rows="4"></textarea></m3>
+              </div>
+              <button id="addComment" type="submit" class="btn btn-primary col-xs-offset-4 col-xs-4" role="button"> Add New Comment <span class="glyphicon glyphicon-comment"></span> </button>
+            </div>
+            </div>
+          </div>
+          <div class="jumbotron2">
+            <div class="container">
+            <div class="row">
+              <m3>Miguel Chavez</m3>
+              <m4>2-days ago</m4>
+              <p><m4>I attend this event last year and it was amazing !!! :)  cant wait to attend again this event this year</m3></p>
+            </div>
+          </div>
+          </div>
+          <div class="jumbotron2">
+            <div class="container">
+            <div class="row">
+              <m3>Gianne Francis</m3>
+              <m4>2-days ago</m4>
+              <p><m4>I attend this event last year and it was super !!! I bet this year its going to be even better, cant wait to attend this year</m3></p>
+            </div>
+          </div>
+          </div>
+          </div>
+
+
+      </div>
+    </div>
+  </div>
+  </body>
+  </html>
